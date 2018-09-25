@@ -1,5 +1,4 @@
 <?php
-
 /**
  * DESING PATTERN -  Factory
  * 
@@ -15,6 +14,7 @@
  * 
  * All messengers (Sms, Email) should extend this abstract Message class.
  */
+
 abstract class MessageAbstract
 {
     // Force Extending class to define this method

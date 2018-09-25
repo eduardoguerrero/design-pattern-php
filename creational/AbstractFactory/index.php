@@ -5,13 +5,11 @@ include_once 'AbstractFactory.php';
 try 
 {
     $sms = MessageFactory::factory('Sms');      // Object(Sms)
-    echo $sms->send();
-    
+    echo $sms->send();    
     
 
     $email = MessageFactory::factory('Email');  // Object (Email)
-    echo $email->send();
-    
+    echo $email->send();    
     
 
     $mms = MessageFactory::factory('mms');      // This will throw an Exception
