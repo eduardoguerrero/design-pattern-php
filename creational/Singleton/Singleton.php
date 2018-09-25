@@ -36,21 +36,24 @@ class AppLog
     * Is not allowed to call from outside to prevent from creating multiple instances,
     * to use the singleton, you have to obtain the instance from Singleton::getInstance() instead
     */
-    private function __construct() {
+    private function __construct()
+    {
         
     }
 
     /**
      * Prevent from being cloned (which would create a second instance of it)
      */
-    private function __clone() {
+    private function __clone()
+    {
         
     }
 
     /**
      * Prevent from being unserialized (which would create a second instance of it)
      */
-    private function __wakeup(){
+    private function __wakeup()
+    {
     	 throw new Exception("Cannot unserialize singleton");    
     }
 
@@ -80,44 +83,13 @@ class AppLog
         return self::$instance;
     }
 
-    public function setLog() 
+    public function LogMessage() 
     {
-        return "Hello";
+        return "A log of this error has been created.";
     }
 
 }
 
 
-$log = AppLog::getInstance();
-
-$log2 = AppLog::getInstance();
-
-echo $log->setLog();
-
-var_dump($log);
-
-var_dump($log2);
-
-/*********************************************************/
-echo "No Singleton pattern";
-
-class AppHelper{
-	
-	public function __construct(){
-
-	}
-
-	public function sayHello(){
-		return "Hello!";
-	}
-}
-
-$helper = new AppHelper();
-
-$helper2 = new AppHelper();
-
-var_dump($helper);
-
-var_dump($helper2);
 
 ?>
