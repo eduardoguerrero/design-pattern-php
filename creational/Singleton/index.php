@@ -15,7 +15,6 @@ var_dump($log);
 var_dump($log2);
 
 
-
 echo "Example without Singleton, multiple instances have been initialized.";
 
 include_once 'NoSingleton.php';
